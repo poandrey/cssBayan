@@ -39,9 +39,7 @@ body {
  	height: 100%;
 	margin: 0 auto;
 	transition: transform 0.5s  ease-out;
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
+
 }
 
 .ac-input:checked ~ .ac-title .icon{
@@ -56,9 +54,7 @@ body {
 	
 }
 
-/* .accardeon:hover > .ac-item .ac-title .icon{
-	opacity: 1;
-} */
+
 
 .icon{
 	opacity: 1;
@@ -86,8 +82,7 @@ body {
 	
 }
 
-/* 
-@media only screen and (min-device-width: 320px) and (max-device-width: 821px) */
+
 
 
 @media (min-device-width: 500px) and (max-device-width: 821px){
