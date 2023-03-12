@@ -1,0 +1,181 @@
+body {
+	font-family: Arial, sans-serif;
+	/* font-size: 0.625rem; */
+	font-size: 10px;
+	line-height: 1;
+	background-color: #bac370fd;
+	
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.wrapper{
+	min-height: 100vh;
+	font-size: 2em;
+
+}
+.container{
+	padding: 0px 15px;
+	margin: 0 auto;
+	max-width: 18rem;
+}
+
+.ac-item{
+	cursor: pointer;
+}
+
+.ac-input{
+	width: 0;
+	height: 0;
+	padding: 1rem;
+}
+
+.ac-input:checked ~ .ac-img{
+	opacity: 1;
+ 	height: 100%;
+	margin: 0 auto;
+	transition: transform 0.5s  ease-out;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.ac-input:checked ~ .ac-title .icon{
+	transform: rotate(45deg);
+
+}
+
+
+
+.ac-input:hover ~ .ac-img{
+	opacity: 1;
+	
+}
+
+/* .accardeon:hover > .ac-item .ac-title .icon{
+	opacity: 1;
+} */
+
+.icon{
+	opacity: 1;
+}
+
+.ac-title{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.ac-img{
+	max-width: 90%;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+	transition: transform 0.7s ease;
+	
+}
+
+.ac-img img{
+	width: 100%;
+	
+}
+
+/* 
+@media only screen and (min-device-width: 320px) and (max-device-width: 821px) */
+
+
+@media (min-device-width: 500px) and (max-device-width: 821px){
+	body{
+		font-size: 20px;
+	}
+	.container {
+		max-width: 50rem;
+	}
+
+	.ac-img img {
+	width: 70%;
+	}
+
+
+}
+
+@media (min-device-width:840px){
+	body {
+			font-size: 16px;
+		}
+		.container {
+			min-width: 52rem;
+		}
+
+		.wrapper {
+		min-height: 100vh;
+		font-size: 1.5em;
+		}
+
+		.ac-img img {
+			width: 30%;
+		}
+
+		.icon{
+			opacity: 0;
+		}
+
+		.accardeon:hover > .ac-item .ac-title .icon{
+			opacity: 1;
+		}
+
+		.ac-item:hover > .ac-img {
+			opacity: 1;
+			height: 100%;
+			animation-name: jump;
+			animation-duration: 1s;
+		}
+
+		
+
+		.ac-input:hover ~ .ac-title .icon {
+			transform: rotate(45deg);
+		}
+
+		.accardeon:hover > .ac-item > .ac-input:checked + .ac-title{
+			color:blue;
+		}
+
+		@keyframes jump {
+			0% {
+					transform: scale(1, 1) translateY(0);
+				}
+			
+				10% {
+					transform: scale(1.1, .9) translateY(0);
+				}
+			
+				30% {
+					transform: scale(.9, 1.1) translateY(-100px);
+				}
+			
+				50% {
+					transform: scale(1, 1) translateY(0);
+				}
+			
+				57% {
+					transform: scale(1, 1) translateY(-7px);
+				}
+			
+				64% {
+					transform: scale(1, 1) translateY(0);
+				}
+			
+				100% {
+					transform: scale(1, 1) translateY(0);
+				}
+			
+			
+		}
+}
