@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
-	/* font-size: 0.625rem; */
+	/* font-size: 0.625rem;  will work only with default fz in brauser*/
 	font-size: 10px;
 	line-height: 1;
 	background-color: #bac370fd;
